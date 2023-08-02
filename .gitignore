@@ -1,0 +1,32 @@
+# Compiled binaries or object files
+*.o
+*.pyc
+*.pyo
+*.pyd
+
+# Log files
+*.log
+
+# IDE-specific files or directories
+.vscode/
+
+# Configuration files with sensitive information
+.env
+
+# Python cache files
+__pycache__/
+
+# Poetry files
+.venv/
+poetry.lock
+
+# Pytest artifacts
+.pytest_cache/
+
+# Database files
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
