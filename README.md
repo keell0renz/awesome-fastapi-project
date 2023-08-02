@@ -1,0 +1,1 @@
+## Awesome FastAPI Project
