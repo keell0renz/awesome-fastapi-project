@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 class Settings(BaseSettings):
     production_database_url: str
     test_database_url: str
-    database_url: str = "sqlite://./test.db"
+    database_url: str = "sqlite://./test.sqlite"
     secret_key: str
     app_debug: bool = True
 
