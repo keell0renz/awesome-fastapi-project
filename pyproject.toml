@@ -11,11 +11,11 @@ python = "^3.9"
 fastapi = "^0.100.1"
 uvicorn = "^0.23.2"
 gunicorn = "^21.2.0"
-pydantic = "^2.1.1"
 tortoise-orm = "^0.19.3"
 asyncpg = "^0.28.0"
 aerich = "^0.7.2"
 python-dotenv = "^1.0.0"
+fastapi-utils = "^0.2.1"
 
 
 [tool.poetry.group.dev.dependencies]
