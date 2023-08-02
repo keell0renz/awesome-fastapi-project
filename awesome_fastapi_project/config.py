@@ -5,14 +5,14 @@ class Settings(BaseSettings):
     test_database_url: str
     database_url: str = "sqlite://:memory:"
     secret_key: str
-    debug: bool = True
+    app_debug: bool = True
 
     class Config:
         env_file = ".env"
 
 config = Settings()
 
-if config.debug:
+if config.app_debug:
     config.database_url = config.test_database_url
 
 else:
