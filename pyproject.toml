@@ -17,6 +17,8 @@ aerich = "^0.7.2"
 python-dotenv = "^1.0.0"
 fastapi-utils = "^0.2.1"
 httpx = "^0.24.1"
+python-jose = "^3.3.0"
+fastapi-jwt-auth = "^0.5.0"
 
 
 [tool.poetry.group.dev.dependencies]
