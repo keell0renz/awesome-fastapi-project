@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from fastapi_utils.cbv import cbv
 
 from .authentication import get_current_user
-
+from .authorization import Ensure
 
 router = APIRouter()
 
