@@ -30,13 +30,6 @@ async def user_is_not_authenticated_exception_handler(request, exc):
         content={"message": f"Oops! You are not authenticated! {exc.message}"}
     )
 
-@app.exception_handler(JWTAuthException)
-async def jwt_auth_exception_handler(request, exc):
-    return JSONResponse(
-        status_code=401,
-        content={"message": f"Oops! JWT authentication failed! {exc}"}
-    )
-
 @app.exception_handler(InvalidTokenError)
 async def invalid_token_error_handler(request, exc):
     return JSONResponse(
@@ -49,4 +42,11 @@ async def expired_signature_error_handler(request, exc):
     return JSONResponse(
         status_code=401,
         content={"message": f"Oops! Token has expired! {exc}"}
+    )
+
+@app.exception_handler(JWTAuthException)
+async def jwt_auth_exception_handler(request, exc):
+    return JSONResponse(
+        status_code=401,
+        content={"message": f"Oops! JWT authentication failed! {exc}"}
     )
