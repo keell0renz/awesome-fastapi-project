@@ -18,7 +18,7 @@ async def get_current_user(Authorize: AuthJWT = Depends()):
         Get current user.
     """
 
-    Authorize.jwt_required()
+    Authorize.jwt_optional()
 
     user = Authorize.get_jwt_subject()
 
