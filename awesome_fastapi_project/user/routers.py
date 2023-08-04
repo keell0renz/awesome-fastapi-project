@@ -1,6 +1,9 @@
 from fastapi import APIRouter
 from fastapi_utils.cbv import cbv
 
+from .authentication import get_current_user
+
+
 router = APIRouter()
 
 @cbv(router)

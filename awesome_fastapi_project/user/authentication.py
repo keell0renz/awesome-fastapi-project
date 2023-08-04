@@ -18,9 +18,8 @@ async def get_current_user(Authorize: AuthJWT = Depends()):
         Get current user.
     """
 
-    try:
-        Authorize.jwt_required()
-        return Authorize.get_jwt_subject()
-    except MissingTokenError:
-        Authorize.jwt_optional()
-        return "anonymous" if Authorize.get_jwt_subject() is None else Authorize.get_jwt_subject()
+    Authorize.jwt_required()
+
+    user = Authorize.get_jwt_subject()
+
+    return "anonymous" if user is None else user
